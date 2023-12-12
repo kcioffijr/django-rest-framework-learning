@@ -12,3 +12,8 @@ class MovieViewSet(viewsets.ModelViewSet):
 class DefaultViewSet(viewsets.ModelViewSet):
     queryset = MovieData.objects.filter(category='N/A')
     serializer_class = MovieSerializer
+
+
+class ActionViewSet(viewsets.ModelViewSet):
+    queryset = MovieData.objects.filter(category='Action')
+    serializer_class = MovieSerializer
